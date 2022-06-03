@@ -1,5 +1,5 @@
 import catchAsyncErrors from '../middleware/catchAsyncErrors.js';
-import nodeMailer from 'nodeMailer';
+import nodeMailer from 'nodemailer';
 
 const sendEmail = catchAsyncErrors(async (options) => {
   const transporter = nodeMailer.createTransport({
