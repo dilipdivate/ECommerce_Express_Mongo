@@ -1,8 +1,11 @@
 import mongoose from 'mongoose';
 
 const connectDatabase = () => {
+  // const CONNECTION_URL = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_CONNECTION}`;
+  const CONNECTION_URL = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_CONNECTION}`;
+
   mongoose
-    .connect(process.env.DB_URI, {
+    .connect(CONNECTION_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
